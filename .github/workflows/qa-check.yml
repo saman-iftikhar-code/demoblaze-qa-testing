@@ -4,8 +4,11 @@ on:
   push:
 
 jobs:
-  qa-check:
+  qa-checks:
     runs-on: ubuntu-latest
     steps:
-      - name: Print a message
-        run: echo "My first GitHub Actions workflow is running"
+      - name: Get repository files
+        uses: actions/checkout@v4
+
+      - name: Check README.md exists
+        run: test -f README.md
