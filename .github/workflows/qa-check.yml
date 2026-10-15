@@ -1,0 +1,11 @@
+name: QA Learning Workflow
+
+on:
+  push:
+
+jobs:
+  qa-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a message
+        run: echo "My first GitHub Actions workflow is running"
